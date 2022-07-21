@@ -87,6 +87,7 @@
 					</div>
 					<div class="col-lg-2">
 						<button type="button" class="btn btn-dark" data-bs-toggle="modal fade" data-bs-target="#login">Connection</button>
+
 					</div>
 				</div>
 
@@ -104,12 +105,12 @@
 									<div class="navbar-collapse">
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
-												<li class=""><a href="#">Acceuil</a></li>
+												<li class=""><a href="${pageContext.request.contextPath}/ServletMainpage">Acceuil</a></li>
+												<li><a href="">Categorie</a></li>
 												<li><a href="#">Categorie</a></li>
 												<li><a href="#">Categorie</a></li>
 												<li><a href="#">Categorie</a></li>
-												<li><a href="#">Categorie</a></li>
-												<li><a href="contact.html">Contact</a></li>
+												<li><a href="${pageContext.request.contextPath}/ServletContact">Contact</a></li>
 											</ul>
 										</div>
 									</div>
