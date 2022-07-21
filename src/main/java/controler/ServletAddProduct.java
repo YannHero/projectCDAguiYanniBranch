@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import dao.ProduitsDAO;
 import modele.ProduitsBean;
 
+import static java.lang.String.valueOf;
+
 /**
  * Servlet implementation class ServletInscription
  */
@@ -36,7 +38,7 @@ public class ServletAddProduct extends HttpServlet {
 
 
 
-        request.getRequestDispatcher("addProductPage/addProductPage.jsp").forward(request, response);
+        request.getRequestDispatcher("page/addProductPage/addProductPage.jsp").forward(request, response);
     }
 
     /**
@@ -51,18 +53,25 @@ public class ServletAddProduct extends HttpServlet {
         String StockString = request.getParameter("InputStock");
         String StockStringMin = request.getParameter("InputStockMin");
 
-        int InputPrice = Integer.parseInt(PriceString);
-        System.out.println(InputPrice);
+       // int InputPrice;
+        //InputPrice = Integer.parseInt(request.getParameter("InputPrice"));
+
+
+       // InputPrice = Integer.parseInt(PriceString);
+      //  System.out.println(InputPrice);
         int InputStock = Integer.parseInt(StockString);
-        System.out.println(InputPrice);
+        System.out.println(InputStock);
         int InputStockMin = Integer.parseInt(StockStringMin);
-        System.out.println(InputPrice);
+        System.out.println(InputStockMin);
+        System.out.println(InputName);
 
-        new ProduitsDAO().ecrire(new ProduitsBean(InputName,InputPrice,InputDescription,InputImage,InputStock,InputStockMin));
+      //  ProduitsBean myProduct = new ProduitsBean(InputName, InputPrice, InputDescription, InputImage, InputStock, InputStockMin);
+     //   System.out.println(myProduct);
 
+         new ProduitsDAO().inserTest(new ProduitsBean(request.getParameter("InputName"),Integer.parseInt(request.getParameter("InputPrice")),request.getParameter("InputDescription"),request.getParameter("InputImage"),Integer.parseInt(request.getParameter("InputStock")),Integer.parseInt(request.getParameter("InputStockMin"))));
 
+        request.getRequestDispatcher("page/mainPage/mainPage.jsp").forward(request, response);
         System.out.println("posted");
-        request.getRequestDispatcher("mainPage/MainPage.jsp").forward(request, response);
     }
 
 }

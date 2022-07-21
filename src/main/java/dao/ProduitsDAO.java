@@ -28,6 +28,7 @@ public class ProduitsDAO {
 
 
 
+            System.out.println("insert succès");
 
             req.executeUpdate();
 
@@ -35,7 +36,34 @@ public class ProduitsDAO {
 
         } catch (Exception e) {
             // TODO: handle exception
-            System.out.println("Insertion KO");
+            System.out.println("Echec de l'insertion");
+        }
+
+    }
+    public void inserTest(ProduitsBean object) {
+
+        try {
+            PreparedStatement req = connect.prepareStatement("INSERT INTO projetcdaguiyan.produits (titre,description,prix,image,stock,stockMinimum)"
+                    + "VALUES (?,?,?,?,?,?,?)");
+
+            req.setString(1, object.getTitre());
+            req.setString(2, object.getDescription());
+            req.setDouble(3, object.getPrix());
+            req.setString(4, object.getImage());
+            req.setInt(6, object.getStock());
+            req.setInt(7, object.getStockMinimum());
+
+
+
+            System.out.println("insert succès");
+
+            req.executeUpdate();
+
+
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Echec de l'insertion");
         }
 
     }

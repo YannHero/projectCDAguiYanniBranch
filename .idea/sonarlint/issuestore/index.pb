@@ -1,6 +1,4 @@
 
-R
-"src/main/java/controler/Login.java,a\b\ab46e0d7ff3cc3c4197aa1e10fd60d040698f312
 U
 %src/main/java/dao/CoordonneesDAO.java,d\b\db2090229db968c6d684306f08354998efa021f1
 J
@@ -15,7 +13,19 @@ b
 2src/main/java/controler/ServletMesAdressePage.java,e\7\e72bcccc11f84b1c47ddf6c9553a95dbc62e4368
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-h
-8src/main/webapp/page/inscriptionPage/inscriptionPage.jsp,3\4\34213867d508d27171691acceab2d170bae200ff
+T
+$src/main/java/controler/Connect.java,e\5\e56c1396e7a73ae79f618728456a725053339b96
+`
+0src/main/webapp/page/contactPage/contactPage.jsp,1\a\1a138ebd8bd2930fb8059192e617d2d33f822b70
+W
+'src/main/webapp/ressources/HeaderApp.js,2\4\24272c6074f0bf366275dc5e517a2ca0407f9ca7
+\
+,src/main/webapp/ressources/InscriptionApp.js,3\c\3ceeee5bb75de4c17de084c62bdd5fba5ebcd506
 Z
-*src/main/webapp/page/mainPage/mainPage.jsp,b\d\bd4c9f7f73aae01edbc25dc7ee72c0acc827aea5
+*src/main/webapp/ressources/ModifUserApp.js,4\a\4a07d6c7704cd14cc76d0c77cfca5dacf577b4ef
+`
+0src/main/webapp/page/productPage/productPage.jsp,c\5\c513d2ead99b53d4869253f284babf2c58526381
+U
+%src/main/webapp/ressources/Header.jsp,0\a\0af06dce39e4ea7a6908234f029b554707f6b374
+d
+4src/main/java/controler/ServletMesCommandesPage.java,d\f\df3eabce8068f9ffe855c8c6cb1ecfd42597e2ea

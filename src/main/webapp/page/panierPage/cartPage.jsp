@@ -82,7 +82,7 @@
 								</ul>
 								<div class="button5">
 									<a href="#" class="btn">Checkout</a>
-									<a href="#" class="btn">Continue shopping</a>
+									<a href="${pageContext.request.contextPath}/ServletMainpage" class="btn btnn">Continue shopping</a>
 								</div>
 							</div>
 						</div>

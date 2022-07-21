@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/ressources/Head.jsp"/>
 <jsp:include page="/ressources/Header.jsp"/>
 <!-- Start addProduct -->
@@ -12,92 +13,70 @@
 							<h4> Admin</h4>
 							<h3>Ajouter un Produit</h3>
 						</div>
-						<form class="prudct-validated" method="post"
-							  action="/ProjetCDAGuiYan/ServletMainpage">
 
-
-							<div class="form-group">
-								<label for="Inputname" class="col-sm-3 control-label">Nom du
-									produit</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" name="Inputname" id="Inputname"
-										   placeholder="Nom produit">
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label for="InputPrice" class="col-sm-3 control-label">Prix</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" name="InputPrice" id="InputPrice"
-										   placeholder="Entrer un Prix">
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label for="InputDescription" class="col-sm-3 control-label">Description</label>
-								<div class="col-sm-9">
-									<textarea class="form-control" name ="InputDescription"></textarea>
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label for="qty" class="col-sm-3 control-label">titre</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" name="InputTitre" id="qty"
-										   placeholder="titre.">
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Stock</label>
-								<div class="col-sm-3">
-									<label class="control-label small" for="InputStock"></label> <input
-										type="text" class="form-control" name="date_start"
-										id="InputStock" placeholder="" name ="InputStock">
-								</div>
-								<div class="col-sm-3">
-									<label class="control-label small" for="date_finish">stock
-										min:</label> <input type="text" class="form-control" name="InputStockMin"
-															id="InputStockMin" placeholder="min">
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label for="InputImage" class="col-sm-3 control-label">Images du
-									produit</label>
-								<div class="col-sm-3">
-									<label class="control-label small" for="file_img">Image
-										(jpg/png):</label> <input type="file" name="InputImage" id="InputImage">
-								</div>
-							</div>
-							<!-- form-group // -->
-							<div class="form-group">
-								<label for="InputCategory" class="col-sm-3 control-label">Categorie</label>
-								<div class="col-sm-3">
-									<select class="form-control" name ="InputCategory">
-										<option value="">Categorie</option>
-										<option value="texnolog2">placebo</option>
-
-									</select>
-								</div>
-								<div class="col-sm-3">
-									<select class="form-control" name ="InputSousCategory">
-										<option value="">Sous-Categorie</option>
-										<option value="texnolog2">placebo</option>
-
-									</select>
-								</div>
-							</div>
-							<!-- form-group // -->
 							<hr>
-							<div class="form-group">
-								<div class="col-sm-offset-3 col-sm-9">
-									<button type="submit" class="btn btn-primary ">Submit</button>
 
+							<form method="post">
+								<div class="mb-3">
+									<label for="ProductName" class="form-label">Nom Du Produit</label>
+									<input type="text" class="form-control" id="ProductName" name="Inputname"
+										   value="<c:out  value="${showProduct.ProductName }" /> ">
 								</div>
-							</div>
+								<div class="mb-3">
+									<label for="price" class="form-label">Prix</label>
+									<input type="number" class="form-control" id="price" name="InputPrice"
+										   value="${showProduct.price }">
+								</div>
+								<div class="mb-3">
+									<label for="Description" class="form-label">Description</label>
+									<input type="text" class="form-control" id="Description" name="InputDescription"
+										   value="${showProduct.Description }">
+								</div>
+								<div class="mb-3">
+									<label for="Titre" class="form-label">Titre</label>
+									<input type="text" class="form-control" id="Titre" name="InputTitre"
+										   value="${showProduct.Titre }">
+								</div>
+								<div class="mb-3">
+									<label for="Stock" class="form-label">Stock</label>
+									<input type="number" class="form-control" id="Stock" name="InputStock"
+										   value="${showProduct.Stock }">
+								</div>
+								<div class="mb-3">
+									<label for="StockMin" class="form-label">Stock Minimal</label>
+									<input type="number" class="form-control" id="StockMin" name="InputStockMin"
+										   value="${showProduct.StockMin }">
+								</div>
+								<div class="mb-3">
+									<label for="StockMin" class="form-label">Image du produit</label>
+									<br>
+									<input type="file" name="thisImage" id="InputImage"
+										   value="${showProduct.thisImage }">
+								</div>
+								<div class="mb-3">
+									<label for="Category" class="form-label">Categorie</label>
+
+									<select class="form-control" name ="InputCategory" id="Category"  value="${showProduct.Category }">
+										<option value="">Categorie</option>
+										<option value="">placebo</option>
+
+									</select>
+								</div>
+								<div class="mb-3">
+									<label for="SousCategory" class="form-label">Sous Category</label>
+
+									<select class="form-control" name ="InputSousCategory" id="SousCategory" value="${showProduct.SousCategory }">
+										<option value="">Categorie</option>
+										<option value="">placebo</option>
+
+									</select>
+								</div>
+
+								<button type="submit" class="btn btn-primary">Ajouter ce produit</button>
+							</form>
+
+
 							<!-- form-group // -->
-						</form>
 					</div>
 				</div>
 
