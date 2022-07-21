@@ -78,7 +78,7 @@
 											<span>Total</span>
 											<span class="total-amount"></span>
 										</div>
-										<a href="checkout.html" class="btn animate">Commandez</a>
+										<a href="${pageContext.request.contextPath}/ServletMesCommandesPage" class="btn animate">Commandez</a>
 									</div>
 								</div>
 								<!--/ End Shopping Item -->
