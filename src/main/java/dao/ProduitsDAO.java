@@ -15,7 +15,7 @@ public class ProduitsDAO {
     public void ecrire(ProduitsBean object) {
 
         try {
-            PreparedStatement req = connect.prepareStatement("INSERT INTO projetcdaguiyan.produits (titre,description,prix,image,idSousCategorie,stock,stockMinimum)"
+            PreparedStatement req = connect.prepareStatement("INSERT INTO produits (titre,description,prix,image,idSousCategorie,stock,stockMinimum)"
                     + "VALUES (?,?,?,?,?,?,?)");
 
             req.setString(1, object.getTitre());

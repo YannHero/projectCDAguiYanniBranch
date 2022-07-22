@@ -13,8 +13,6 @@ b
 2src/main/java/controler/ServletMesAdressePage.java,e\7\e72bcccc11f84b1c47ddf6c9553a95dbc62e4368
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-T
-$src/main/java/controler/Connect.java,e\5\e56c1396e7a73ae79f618728456a725053339b96
 `
 0src/main/webapp/page/contactPage/contactPage.jsp,1\a\1a138ebd8bd2930fb8059192e617d2d33f822b70
 W
